@@ -56,12 +56,9 @@ https://github.com/watari0408/zenn-article
   - **表示 → ターミナル** をクリック
 <br>
 2. ショートカットキー： 
-  - **Windows / Linux**： `Ctrl + Shift + \``（バッククォート）
-  - **Mac**： `Control + Shift + \``（バッククォート）
+  - **Windows / Linux**： `Ctrl +  J`
+  - **Mac**： `Command + J`
 
-> ※ バッククォートについて
-- JIS配列 : Shiftキーを押しながら「@」です。
-- US配列 :（\`）はキーボードの「1」の左にあるキーです。
 
 ---
 

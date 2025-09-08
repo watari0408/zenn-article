@@ -1,0 +1,17 @@
+{
+  "name": "public-zenn-docs",
+  "version": "1.0.0",
+  "private": true,
+  "devDependencies": {
+    "markdownlint-cli2": "^0.18.1",
+    "textlint": "^12.2.1",
+    "textlint-rule-preset-ja-technical-writing": "^8.0.0",
+    "zenn-cli": "0.1.144"
+  },
+  "scripts": {
+    "preview": "npx zenn preview --port 8000 --host 0.0.0.0",
+    "lint:text": "textlint 'articles/**/*.md' 'books/**/*.md'",
+    "lint:md": "markdownlint-cli2 'articles/**/*.md' 'books/**/*.md'",
+    "lint": "npm run lint:text && npm run lint:md"
+  }
+}

@@ -1,0 +1,75 @@
+
+> public-zenn-docs@1.0.0 lint:text
+> textlint 'articles/**/*.md' 'books/**/*.md'
+
+
+/workdir/books/react-guide/compile-questions.md
+  11:27    error  Disallow to use "？"                                                                          ja-technical-writing/no-exclamation-question-mark
+  13:24    error  Disallow to use "？"                                                                          ja-technical-writing/no-exclamation-question-mark
+  23:456   error  Line 23 sentence length(157) exceeds the maximum sentence length of 100.
+Over 57 characters                      ja-technical-writing/sentence-length
+  28:19    error  不自然なアルファベットがあります: w                                                           ja-technical-writing/ja-unnatural-alphabet
+  38:1034  error  Line 38 sentence length(115) exceeds the maximum sentence length of 100.
+Over 15 characters                      ja-technical-writing/sentence-length
+  40:27    error  一文に二回以上利用されている助詞 "に" がみつかりました。
+
+次の助詞が連続しているため、文を読みにくくしています。
+
+- "に"
+- "に"
+
+同じ助詞を連続して利用しない、文の中で順番を入れ替える、文を分割するなどを検討してください。
+  ja-technical-writing/no-doubled-joshi
+
+/workdir/books/react-guide/component-usage.md
+  13:18  error  文末が"。"で終わっていません。  ja-technical-writing/ja-no-mixed-period
+  21:37  error  文末が"。"で終わっていません。  ja-technical-writing/ja-no-mixed-period
+  25:19  error  文末が"。"で終わっていません。  ja-technical-writing/ja-no-mixed-period
+  31:3   error  文末が"。"で終わっていません。  ja-technical-writing/ja-no-mixed-period
+  35:4   error  文末が"。"で終わっていません。  ja-technical-writing/ja-no-mixed-period
+
+/workdir/books/react-guide/import-react.md
+  63:196   error  文末が"。"で終わっていません。                                            ja-technical-writing/ja-no-mixed-period
+  63:1823  error  Line 63 sentence length(137) exceeds the maximum sentence length of 100.
+Over 37 characters  ja-technical-writing/sentence-length
+
+/workdir/books/react-guide/jsx-intro.md
+  38:109  error  【dict5】 "変換を行う"は冗長な表現です。"変換する"など簡潔な表現にすると文章が明瞭になります。
+解説: https://github.com/textlint-ja/textlint-rule-ja-no-redundant-expression#dict5  ja-technical-writing/ja-no-redundant-expression
+
+/workdir/books/react-guide/jsx-syntax.md
+  33:12  error  Disallow to use "！"  ja-technical-writing/no-exclamation-question-mark
+
+/workdir/books/react-guide/overview.md
+  45:20  ✓ error  【dict2】 "することができるReact"は冗長な表現です。"することが"を省き簡潔な表現にすると文章が明瞭になります。
+解説: https://github.com/textlint-ja/textlint-rule-ja-no-redundant-expression#dict2  ja-technical-writing/ja-no-redundant-expression
+
+/workdir/books/react-guide/react-create-element.md
+  20:20  error  文末が"。"で終わっていません。  ja-technical-writing/ja-no-mixed-period
+
+/workdir/books/react-guide/rendering-flow.md
+  29:14   error  文末が"。"で終わっていません。                                            ja-technical-writing/ja-no-mixed-period
+  32:891  error  Line 32 sentence length(285) exceeds the maximum sentence length of 100.
+Over 185 characters  ja-technical-writing/sentence-length
+  34:23   error  一つの文で"、"を4つ以上使用しています                                     ja-technical-writing/max-ten
+  35:49   error  一つの文で"、"を4つ以上使用しています                                     ja-technical-writing/max-ten
+
+/workdir/books/react-guide/virtual-dom.md
+  16:243  error  Line 16 sentence length(101) exceeds the maximum sentence length of 100.
+Over 1 characters  ja-technical-writing/sentence-length
+
+/workdir/books/react-guide/what-is-component.md
+  33:13  error  一文に二回以上利用されている助詞 "が" がみつかりました。
+
+次の助詞が連続しているため、文を読みにくくしています。
+
+- "が"
+- "が"
+
+同じ助詞を連続して利用しない、文の中で順番を入れ替える、文を分割するなどを検討してください。
+  ja-technical-writing/no-doubled-joshi
+
+✖ 23 problems (23 errors, 0 warnings)
+✓ 1 fixable problem.
+Try to run: $ textlint --fix [file]
+

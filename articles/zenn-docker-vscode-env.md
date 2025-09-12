@@ -74,13 +74,23 @@ git clone https://github.com/watari0408/zenn-article.git
 cd zenn-article
 ```
 
-## 5. コンテナを起動
+## 5. 初回セットアップ（初回のみ）
+>💡 .env ファイルには、Dockerコンテナ内で作成されるファイルの所有者情報（UID/GID）を記録します。  
+>   これにより、WSLやMacでもファイルの削除・編集がスムーズになります。
+
+初回は以下のコマンドを実行してください：
+```
+chmod +x setup.sh   # 実行権限を付与（初回のみ）
+./setup.sh          # .env を自動生成
+```
+
+## 6. コンテナを起動
 これでZenn CLIやtextlintが使える状態のコンテナが立ち上がります。
 ```
 docker compose up -d
 ```
 
-## 6. 記事を作成
+## 7. 記事を作成
 ### 単発記事
 ```
 docker compose exec zenn npx zenn new:article --slug my-first-article
@@ -92,14 +102,14 @@ docker compose exec zenn npx zenn new:book --slug my-first-book-2025
 ```
 
 
-## 7. プレビューで確認
+## 8. プレビューで確認
 ブラウザで http://localhost:8000 を開くと、記事のプレビューが見られます。
 ```
 docker compose exec zenn npx zenn preview
 ```
 
 
-## 8. Lintで文章チェック
+## 9. Lintで文章チェック
 文末の句点、冗長表現、長文などを自動チェック
 ```
 docker compose exec zenn npm run lint
@@ -113,7 +123,7 @@ docker compose exec zenn npm run lint
 docker compose exec zenn npx textlint --fix 'articles/**/*.md' 'books/**/*.md'
 ```
 
-## 9. GitHubにプッシュ（公開）
+## 10. GitHubにプッシュ（公開）
 mainブランチにpushすると、Zennに反映されます。
 ```
 git add .
@@ -122,7 +132,7 @@ git push
 ```
 
 
-## 10. まとめ
+## 11. まとめ
 - OSを問わず、Docker + VSCodeで同じ環境を再現可能
 - Lintで品質を担保
 - GitHub連携で公開もスムーズ
@@ -131,3 +141,6 @@ git push
 説明書も作っていますので、必要に応じて参考にしてください。
 - `README.md` : 環境の概要をにまとめています。困ったことがあれば目を通してみてください。
 - `WORKFLOW.md` : 記事の制作からGitHubにPushするまでの手順をまとめています。
+- `.env` に `UID/GID` を定義することで、Dockerコンテナ内で作成されるファイルの所有権をホストユーザーに合わせています
+- `.env` は `.gitignore` に追加済み。他の人の環境に影響しません
+- 初回は ./setup.sh を実行して .env を生成してください

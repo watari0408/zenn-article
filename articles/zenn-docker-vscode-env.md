@@ -13,7 +13,7 @@ Zennで記事を書きたいけど、環境構築が面倒…
 ※ GitHubとZennの連携はすでに終わっている前提です。
 
 ## 私のZenn 執筆環境
-https://github.com/watari0408/zenn-article
+https://github.com/watari0408/zenn-sample
 
 ---
 
@@ -70,8 +70,8 @@ https://github.com/watari0408/zenn-article
 > このコマンドを実行すると、記事執筆に必要な設定やツールがすべて入った環境が手に入ります。
 > 自分で一から制作する必要がないため、時間短縮に繋がります。
 ```
-git clone https://github.com/watari0408/zenn-article.git
-cd zenn-article
+git clone https://github.com/watari0408/zenn-sample.git
+cd zenn-sample
 ```
 
 ## 5. 初回セットアップ（初回のみ）

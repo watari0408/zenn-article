@@ -1,1 +1,19 @@
-node_modules
+# Node.js関連
+node_modules/
+
+# Docker関連
+.env
+*.log
+
+# Zenn CLIのキャッシュや一時ファイル（念のため）
+.zenn/
+
+# VSCode設定（個人環境に依存するため）
+.vscode/
+
+# OS別不要ファイル
+.DS_Store
+Thumbs.db
+
+# その他
+*.swp

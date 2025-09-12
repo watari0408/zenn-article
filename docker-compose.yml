@@ -8,6 +8,6 @@ services:
       - "8000:8000"
     volumes:
       - .:/workdir
-      - /workdir/node_modules
+    working_dir: /workdir
+    user: "${UID}:${GID}"
     command: ["npm", "run", "preview"]
-

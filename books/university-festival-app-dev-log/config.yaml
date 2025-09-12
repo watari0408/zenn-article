@@ -1,8 +1,8 @@
-title: ""
-summary: ""
-topics: []
-published: false
-price: 0 # 有料の場合200〜5000
+title: "学園祭アプリ開発備忘録"
+summary: "学園祭アプリの設計から運用までを記録したものです。"
+topics: ["react", "Typescript", "frontend"]
+published: true
+price: 0 # 
 # 本に含めるチャプターを順番に並べましょう
 chapters:
   - example1
